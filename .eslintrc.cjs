@@ -24,4 +24,9 @@ module.exports = {
 		"linebreak-style": 0,
 		"no-console": ["error"],
 	},
+	settings: {
+		react: {
+			version: "detect",
+		},
+	},
 };

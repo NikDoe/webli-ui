@@ -25,8 +25,7 @@
 		"dev": "vite",
 		"build": "tsc && vite build",
 		"preview": "vite preview",
-		"prepare": "husky install",
-		"lint": "npx eslint --fix"
+		"prepare": "husky install"
 	},
 	"dependencies": {
 		"react": "^18.2.0",
@@ -51,6 +50,7 @@
 		"vite": "^4.1.0"
 	},
 	"lint-staged": {
-		"*": "prettier --ignore-unknown --write"
+		"*.{js,jsx,ts,tsx}": "npx eslint --fix",
+		"*.{js,jsx,ts,tsx,html,css,json,cjs,md}": "npx prettier --write"
 	}
 }
