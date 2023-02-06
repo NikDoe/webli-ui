@@ -22,6 +22,6 @@ module.exports = {
 		semi: ["error", "always"],
 		"react/react-in-jsx-scope": "off",
 		"linebreak-style": 0,
-		"no-console": ["error"]
+		"no-console": ["error"],
 	},
 };

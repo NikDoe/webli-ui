@@ -3,7 +3,11 @@
 	"version": "0.0.0",
 	"description": "library of UI components for react w/ typescript project",
 	"type": "module",
-	"keywords": ["ui-kit", "react", "typescript"],
+	"keywords": [
+		"ui-kit",
+		"react",
+		"typescript"
+	],
 	"contributors": [
 		{
 			"name": "Fryly"
