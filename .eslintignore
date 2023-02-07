@@ -1,3 +1,4 @@
 dist
 *.yaml
 .eslintrc.cjs
+webpack.config.js
