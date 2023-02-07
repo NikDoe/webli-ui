@@ -12,7 +12,6 @@ export default defineConfig({
 		lib: {
 			name: "webli-ui",
 			entry: path.resolve(__dirname, "src/index.ts"),
-			formats: ["umd"],
 			fileName: "index",
 		},
 		rollupOptions: {
