@@ -1,23 +1,23 @@
 .Button {
-    $this: &;
+	$this: &;
 
-    all: unset;
-    background-color: $primary-color;
-    font-size: 20px;
-    color: $font-color;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: background-color .2s ease-in;
-    &#{$this}:hover {
-        background-color: $primary-color-hower;
-    }
+	all: unset;
+	background-color: $primary-color;
+	font-size: 20px;
+	color: $font-color;
+	padding: 10px 15px;
+	border-radius: 5px;
+	transition: background-color 0.2s ease-in;
+	&#{$this}:hover {
+		background-color: $primary-color-hower;
+	}
 
-    &#{$this}Disabled {
-        color: rgba($disabled-font-color, .3);
-        background-color: $disabled-color;
+	&#{$this}Disabled {
+		color: rgba($disabled-font-color, 0.3);
+		background-color: $disabled-color;
 
-        &:hover {
-            background-color: $disabled-color-hower;
-        }
-    }
+		&:hover {
+			background-color: $disabled-color-hower;
+		}
+	}
 }

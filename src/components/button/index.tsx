@@ -1,4 +1,5 @@
 import { ButtonHTMLAttributes, DetailedHTMLProps, FC, MouseEvent } from "react";
+import { classNames } from "../../utils";
 import styles from "./index.module.scss";
 
 type ButtonType = "button" | "submit" | "reset";
@@ -12,7 +13,7 @@ interface IButtonProps
 	className?: string;
 	type?: ButtonType;
 	isDisabled?: boolean;
-	onClick: (event: MouseEvent) => void;
+	onClick?: (event: MouseEvent) => void;
 }
 
 const Button: FC<IButtonProps> = ({
@@ -23,29 +24,8 @@ const Button: FC<IButtonProps> = ({
 	onClick,
 	...props
 }) => {
-	const classNames = (
-		mainClass: string,
-		btnDisabled?: boolean,
-		classes?: string,
-	): string => {
-		if (classes)
-			return mainClass
-				.split(" ")
-				.concat(
-					btnDisabled ? `${mainClass}Disabled` : "",
-					classes.split(" "),
-				)
-				.filter((str) => str !== "")
-				.join(" ");
-		return `${
-			btnDisabled
-				? `${styles.Button} ${mainClass}Disabled`
-				: `${styles.Button}`
-		}`;
-	};
 	return (
 		<button
-			style={{ fontStyle: "italic" }}
 			className={classNames(styles.Button, isDisabled, className)}
 			type={type}
 			disabled={isDisabled}
