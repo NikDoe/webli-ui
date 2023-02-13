@@ -1,18 +1,26 @@
+import { IButtonProps, IClassObject } from "../types";
+
 export const classNames = (
 	mainClass: string,
-	isDisabled?: boolean,
-	classes?: string,
+	obj: IClassObject,
+	props: IButtonProps,
+	customClasses?: string,
 ): string => {
-	if (classes)
-		return mainClass
-			.split(" ")
-			.concat(
-				isDisabled ? `${mainClass}Disabled` : "",
-				classes.split(" "),
-			)
-			.filter((str) => str !== "")
-			.join(" ");
-	return `${
-		isDisabled ? `${mainClass} ${mainClass}Disabled` : `${mainClass}`
-	}`;
+	let classNamesArr: string[] = [];
+
+	for (const [key, value] of Object.entries(props)) {
+		if (obj[key] !== undefined && value) {
+			const cls =
+				typeof value !== "boolean"
+					? `${obj[key]}${value}`
+					: `${obj[key]}`;
+			classNamesArr.push(cls);
+		}
+	}
+
+	if (customClasses) {
+		classNamesArr = classNamesArr.concat(customClasses);
+	}
+
+	return `${mainClass} ${classNamesArr.join(" ")}`;
 };
