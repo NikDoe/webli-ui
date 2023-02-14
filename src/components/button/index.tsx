@@ -1,38 +1,31 @@
-import { ButtonHTMLAttributes, DetailedHTMLProps, FC, MouseEvent } from "react";
+import { FC } from "react";
+import { IButtonProps, IClassObject } from "../../types";
 import { classNames } from "../../utils";
-import styles from "./index.module.scss";
+import styles from "./styles.module.scss";
 
-type ButtonType = "button" | "submit" | "reset";
+const classNamesObj: IClassObject = {
+	type: "type-",
+	isDisabled: styles["Button-disabled"],
+};
 
-interface IButtonProps
-	extends DetailedHTMLProps<
-			ButtonHTMLAttributes<HTMLButtonElement>,
-			HTMLButtonElement
-		>,
-		React.AriaAttributes {
-	className?: string;
-	type?: ButtonType;
-	isDisabled?: boolean;
-	onClick?: (event: MouseEvent) => void;
-}
+const defaultProps: IButtonProps = {
+	type: "button",
+};
 
-const Button: FC<IButtonProps> = ({
-	children,
-	className,
-	type,
-	isDisabled,
-	onClick,
-	...props
-}) => {
+const Button: FC<IButtonProps> = (props) => {
 	return (
 		<button
-			className={classNames(styles.Button, isDisabled, className)}
-			type={type}
-			disabled={isDisabled}
-			onClick={onClick}
-			{...props}
+			type={props.type}
+			disabled={props.isDisabled}
+			className={classNames(
+				styles.Button,
+				classNamesObj,
+				{ ...defaultProps, ...props },
+				props.className,
+			)}
+			onClick={props.onClick}
 		>
-			{children}
+			{props.children}
 		</button>
 	);
 };

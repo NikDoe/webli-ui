@@ -12,7 +12,7 @@
 		background-color: $primary-color-hower;
 	}
 
-	&#{$this}Disabled {
+	&#{$this}-disabled {
 		color: rgba($disabled-font-color, 0.3);
 		background-color: $disabled-color;
 
