@@ -9,7 +9,7 @@
 	border-radius: 5px;
 	transition: background-color 0.2s ease-in;
 	&#{$this}:hover {
-		background-color: $primary-color-hower;
+		background-color: $primary-color-hover;
 	}
 
 	&#{$this}-disabled {
@@ -17,7 +17,7 @@
 		background-color: $disabled-color;
 
 		&:hover {
-			background-color: $disabled-color-hower;
+			background-color: $disabled-color-hover;
 		}
 	}
 }

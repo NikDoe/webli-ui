@@ -17,7 +17,7 @@ const Button: FC<IButtonProps> = (props) => {
 		<button
 			type={props.type}
 			disabled={props.isDisabled}
-			className={classNames(
+			className={classNames<IButtonProps>(
 				styles.Button,
 				classNamesObj,
 				{ ...defaultProps, ...props },
