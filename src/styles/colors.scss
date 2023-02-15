@@ -1,8 +1,20 @@
 $primary-color: #6b99c3;
 $primary-color-hover: #16354d;
 
+/* FONT */
+$font-color: #fff;
+$font-color-darkmode: #222;
+
+/* BUTTON */
 $disabled-color: #e4e5ea;
 $disabled-color-hover: #d2d2d4;
 $disabled-font-color: #0c151c;
 
-$font-color: #fff;
+/* INPUT */
+$input-bg-color: #ecf1f7;
+$input-bg-color-hover: #e4ebf3;
+
+/* ERRORS */
+$error-color: #e31235;
+$error-light-color: #fbe4e3;
+$error-hover: #fadbda;

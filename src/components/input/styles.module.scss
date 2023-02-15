@@ -1,0 +1,25 @@
+.Input {
+	$this: &;
+
+	display: flex;
+	align-items: center;
+	padding: 18px 40px 18px 12px;
+	width: 100%;
+	background-color: $input-bg-color;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	outline: transparent;
+	transition: all 0.25s ease;
+
+	&:hover {
+		background-color: $input-bg-color-hover;
+	}
+
+	&#{$this}__error {
+		background-color: $error-light-color;
+
+		&:hover {
+			background-color: $error-hover;
+		}
+	}
+}
