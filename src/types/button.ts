@@ -1,14 +1,15 @@
 import { DetailedHTMLProps, ButtonHTMLAttributes, MouseEvent } from "react";
+import { ICommonProps } from "./common";
 
 type ButtonType = "button" | "submit" | "reset";
 
 export interface IButtonProps
 	extends DetailedHTMLProps<
-		ButtonHTMLAttributes<HTMLButtonElement>,
-		HTMLButtonElement
-	> {
+			ButtonHTMLAttributes<HTMLButtonElement>,
+			HTMLButtonElement
+		>,
+		ICommonProps {
 	type?: ButtonType;
-	className?: string;
 	isDisabled?: boolean;
 	onClick?: (event: MouseEvent) => void;
 }

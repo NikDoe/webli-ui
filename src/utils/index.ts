@@ -1,9 +1,9 @@
-import { IButtonProps, IClassObject } from "../types";
+import { IClassObject } from "../types";
 
-export const classNames = (
+export const classNames = <T extends object>(
 	mainClass: string,
 	obj: IClassObject,
-	props: IButtonProps,
+	props: T,
 	customClasses?: string,
 ): string => {
 	let classNamesArr: string[] = [];
