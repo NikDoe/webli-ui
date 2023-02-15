@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Button from "./components/button";
+import { Input } from "./components";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
 	<React.StrictMode>
-		<Button onClick={() => ""}>кнпока</Button>
+		<Input />
 	</React.StrictMode>,
 );
