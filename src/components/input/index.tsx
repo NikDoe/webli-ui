@@ -18,6 +18,7 @@ const Input = forwardRef(
 					props.className,
 				)}
 				ref={ref}
+				{...props}
 			/>
 		);
 	},
