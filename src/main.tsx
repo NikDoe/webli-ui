@@ -1,3 +1,6 @@
-import { Input } from "./components";
+import React from "react";
+import ReactDOM from "react-dom/client";
 
-export { Input };
+ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
+	<React.StrictMode></React.StrictMode>,
+);

@@ -20,7 +20,7 @@ export default defineConfig({
 		emptyOutDir: true,
 		lib: {
 			name: "webli-ui",
-			entry: path.resolve(__dirname, "src/main.tsx"),
+			entry: path.resolve(__dirname, "src/index.ts"),
 			fileName: "index",
 		},
 		rollupOptions: {
