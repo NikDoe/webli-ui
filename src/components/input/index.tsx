@@ -1,26 +1,11 @@
+import clsx from "clsx";
 import { ForwardedRef, forwardRef } from "react";
 import { IInputProps } from "../../types/input";
-import { classNames } from "../../utils";
 import styles from "./styles.module.scss";
-
-const inputClassNames = {};
-
-const inputDefaultProps = {};
 
 const Input = forwardRef(
 	(props: IInputProps, ref: ForwardedRef<HTMLInputElement>): JSX.Element => {
-		return (
-			<input
-				className={classNames(
-					styles.Input,
-					inputClassNames,
-					{ ...inputDefaultProps, ...props },
-					props.className,
-				)}
-				ref={ref}
-				{...props}
-			/>
-		);
+		return <input className={clsx(styles.Input)} ref={ref} {...props} />;
 	},
 );
 
