@@ -5,7 +5,13 @@ import styles from "./styles.module.scss";
 
 const Input = forwardRef(
 	(props: IInputProps, ref: ForwardedRef<HTMLInputElement>): JSX.Element => {
-		return <input className={clsx(styles.Input)} ref={ref} {...props} />;
+		return (
+			<input
+				className={clsx(styles.Input, props.className)}
+				ref={ref}
+				{...props}
+			/>
+		);
 	},
 );
 

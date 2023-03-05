@@ -12,6 +12,7 @@ const Button: FC<IButtonProps> = (props) => {
 			className={clsx(
 				styles.Button,
 				props.isDisabled && styles.Button__disabled,
+				props.className,
 			)}
 			onClick={props.onClick}
 		>
