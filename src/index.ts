@@ -1,3 +1,3 @@
-import { Button, Input } from "./components";
+import { Button, Icon, Input } from "./components";
 
-export { Button, Input };
+export { Button, Icon, Input };

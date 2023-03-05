@@ -1,4 +1,6 @@
 import { IButtonProps } from "./button";
-import { IIconProps } from "./icon";
+import { IconType, iconTypes, IIconProps } from "./icon";
 
-export type { IButtonProps, IIconProps };
+export { iconTypes };
+
+export type { IButtonProps, IconType, IIconProps };
