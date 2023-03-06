@@ -13,4 +13,5 @@ export const iconTypes = new Map([
 
 export interface IIconProps extends DOMAttributes<HTMLSpanElement> {
 	type: IconType;
+	className?: string;
 }

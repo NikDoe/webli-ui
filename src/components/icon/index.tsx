@@ -7,9 +7,9 @@ import styles from "./styles.module.scss";
 const getIcon = (type: IconType): JSX.Element =>
 	iconTypes.get(type) as JSX.Element;
 
-const Icon: FC<IIconProps> = (props) => {
+const Icon: FC<IIconProps> = ({ className, ...props }) => {
 	return (
-		<div className={clsx(styles.Icon, props.className)} {...props}>
+		<div className={clsx(styles.Icon, className)} {...props}>
 			{getIcon(props.type)}
 		</div>
 	);
