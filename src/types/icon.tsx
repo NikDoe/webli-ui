@@ -1,5 +1,4 @@
 import { DOMAttributes } from "react";
-import { ICommonProps } from "./common";
 
 import { ReactComponent as Visible } from "../assets/icons/files/visible.svg";
 import { ReactComponent as VisibleOff } from "../assets/icons/files/visibleoff.svg";
@@ -12,8 +11,6 @@ export const iconTypes = new Map([
 	["visibleoff", <VisibleOff key={newGuid()} />],
 ]);
 
-export interface IIconProps
-	extends DOMAttributes<HTMLSpanElement>,
-		ICommonProps {
+export interface IIconProps extends DOMAttributes<HTMLSpanElement> {
 	type: IconType;
 }

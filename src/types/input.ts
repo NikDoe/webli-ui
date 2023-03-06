@@ -1,12 +1,10 @@
 import { DetailedHTMLProps, HTMLAttributes } from "react";
-import { ICommonProps } from "./common";
 
 export interface IInputProps
 	extends DetailedHTMLProps<
-			HTMLAttributes<HTMLInputElement>,
-			HTMLInputElement
-		>,
-		ICommonProps {
+		HTMLAttributes<HTMLInputElement>,
+		HTMLInputElement
+	> {
 	name?: string;
 	type?: string;
 	error?: string;
