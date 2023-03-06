@@ -24,7 +24,6 @@ const FormField: FC<IFormField> = ({
 				isFocused && styles.FormField__active,
 				className,
 			)}
-			{...props}
 		>
 			<label className={clsx(styles.Label)} htmlFor={name}>
 				{label}
@@ -41,6 +40,7 @@ const FormField: FC<IFormField> = ({
 						onBlur={onBlur}
 						onFocus={onFocus}
 						type={type}
+						{...props}
 					/>
 					{error && <div className={styles.Error}>{error}</div>}
 				</>

@@ -1,8 +1,8 @@
-import { FocusEvent } from "react";
+import { FocusEvent, InputHTMLAttributes } from "react";
 
 export type FormFieldType = "text" | "password" | "tel" | "textarea";
 
-export interface IFormField {
+export interface IFormField extends InputHTMLAttributes<HTMLInputElement> {
 	className?: string;
 	isFocused?: boolean;
 	isRequired?: boolean;
