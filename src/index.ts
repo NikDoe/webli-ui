@@ -1,3 +1,3 @@
-import { Button, Icon, Input } from "./components";
+import { Button, FormField, Icon, Input } from "./components";
 
-export { Button, Icon, Input };
+export { Button, FormField, Icon, Input };

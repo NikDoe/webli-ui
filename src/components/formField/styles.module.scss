@@ -1,0 +1,47 @@
+.FormField {
+	$this: &;
+
+	position: relative;
+	margin-bottom: 20px;
+	transition: all 0.2s;
+
+	&__active {
+		.Label {
+			font-size: 12px;
+			top: 0px;
+			background-color: #fff;
+			padding: 0 5px;
+		}
+	}
+}
+
+.Label {
+	position: absolute;
+	left: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 14px;
+	transition: all 0.2s;
+
+	&__required {
+		color: $error-color;
+	}
+}
+
+.Error {
+	margin-top: 5px;
+	font-size: 12px;
+	color: $error-color;
+	transition: all 0.2s;
+}
+
+.Input {
+	transition: all 0.2s;
+	&__active {
+		border: 1px solid rgba(0, 0, 0, 0.54);
+		background-color: #fff;
+		&:hover {
+			background-color: #fff;
+		}
+	}
+}

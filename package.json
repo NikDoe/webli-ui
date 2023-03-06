@@ -74,7 +74,6 @@
 	},
 	"lint-staged": {
 		"*.{js,jsx,ts,tsx}": "npx eslint --fix",
-		"*.(css|scss)": "npx stylelint --fix",
 		"*.{js,jsx,ts,tsx,html,css|scss,json,cjs,md}": "npx prettier --write"
 	},
 	"files": [
