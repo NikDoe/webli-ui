@@ -4,7 +4,7 @@ import clsx from "clsx";
 
 import styles from "./styles.module.scss";
 
-const Button: FC<IButtonProps> = (props) => {
+const Button: FC<IButtonProps> = ({ className, ...props }) => {
 	return (
 		<button
 			type={props.type}
@@ -12,9 +12,10 @@ const Button: FC<IButtonProps> = (props) => {
 			className={clsx(
 				styles.Button,
 				props.isDisabled && styles.Button__disabled,
-				props.className,
+				className,
 			)}
 			onClick={props.onClick}
+			{...props}
 		>
 			{props.children}
 		</button>

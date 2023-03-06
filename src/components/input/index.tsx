@@ -4,10 +4,17 @@ import { IInputProps } from "../../types/input";
 import styles from "./styles.module.scss";
 
 const Input = forwardRef(
-	(props: IInputProps, ref: ForwardedRef<HTMLInputElement>): JSX.Element => {
+	(
+		{ className, ...props }: IInputProps,
+		ref: ForwardedRef<HTMLInputElement>,
+	): JSX.Element => {
 		return (
 			<input
-				className={clsx(styles.Input, props.className)}
+				className={clsx(
+					styles.Input,
+					props.error && styles.Input__error,
+					className,
+				)}
 				ref={ref}
 				{...props}
 			/>
