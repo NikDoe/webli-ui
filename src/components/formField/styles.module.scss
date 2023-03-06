@@ -2,7 +2,7 @@
 	$this: &;
 
 	position: relative;
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 	transition: all 0.2s;
 
 	&__active {
@@ -29,7 +29,8 @@
 }
 
 .Error {
-	margin-top: 5px;
+	position: absolute;
+	bottom: -15px;
 	font-size: 12px;
 	color: $error-color;
 	transition: all 0.2s;
