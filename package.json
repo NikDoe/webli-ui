@@ -1,6 +1,6 @@
 {
 	"name": "webli-ui",
-	"version": "0.5.0",
+	"version": "0.5.1",
 	"description": "library of UI components for react w/ typescript project",
 	"keywords": [
 		"ui-kit",
