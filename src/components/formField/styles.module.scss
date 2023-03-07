@@ -36,6 +36,13 @@
 	transition: all 0.2s;
 }
 
+.Visible {
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	transform: translateY(-50%);
+}
+
 .Input {
 	transition: all 0.2s;
 	&__active {
