@@ -1,10 +1,10 @@
-import { FC } from "react";
+import { FC, memo } from "react";
 import { IButtonProps } from "../../types";
 import clsx from "clsx";
 
 import styles from "./styles.module.scss";
 
-const Button: FC<IButtonProps> = ({ className, ...props }) => {
+const ButtonComponent: FC<IButtonProps> = ({ className, ...props }) => {
 	return (
 		<button
 			type={props.type}
@@ -21,5 +21,7 @@ const Button: FC<IButtonProps> = ({ className, ...props }) => {
 		</button>
 	);
 };
+
+const Button = memo(ButtonComponent);
 
 export default Button;
