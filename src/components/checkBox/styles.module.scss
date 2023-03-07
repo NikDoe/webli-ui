@@ -2,6 +2,11 @@
 	position: relative;
 	display: inline-flex;
 	align-items: center;
+	margin-bottom: 10px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
 
 	&:hover {
 		svg {
