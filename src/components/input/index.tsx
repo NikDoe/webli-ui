@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import { ForwardedRef, forwardRef } from "react";
-import { IInputProps } from "../../types/input";
+import { IInputProps } from "../../types";
 import styles from "./styles.module.scss";
 
 const Input = forwardRef(
