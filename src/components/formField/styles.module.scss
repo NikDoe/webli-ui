@@ -21,6 +21,7 @@
 	top: 50%;
 	transform: translateY(-50%);
 	font-size: 14px;
+	pointer-events: none;
 	transition: all 0.2s;
 
 	&__required {
