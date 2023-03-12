@@ -1,3 +1,4 @@
+import { createDate } from "./date";
 import { newGuid } from "./guid";
 
-export { newGuid };
+export { createDate, newGuid };
