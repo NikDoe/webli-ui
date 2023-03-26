@@ -1,10 +1,10 @@
 import clsx from "clsx";
 import { FC, memo } from "react";
-import { IAvatarProps } from "../../types";
+import { IAvatarProps } from "types";
 
 import styles from "./styles.module.scss";
 
-import Icon from "../icon";
+import { Icon } from "components";
 
 const AvatarComponent: FC<IAvatarProps> = ({
 	className,

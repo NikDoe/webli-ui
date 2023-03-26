@@ -1,5 +1,5 @@
 import { FC, memo } from "react";
-import { IButtonProps } from "../../types";
+import { IButtonProps } from "types";
 import clsx from "clsx";
 
 import styles from "./styles.module.scss";

@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { FC, memo } from "react";
-import { ICheckboxProps } from "../../types";
-import Icon from "../icon";
+import { ICheckboxProps } from "types";
+import { Icon } from "components";
 
 import styles from "./styles.module.scss";
 

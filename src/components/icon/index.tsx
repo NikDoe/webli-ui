@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import { FC, memo } from "react";
-import { IconType, iconTypes, IIconProps } from "../../types";
+import { IconType, iconTypes, IIconProps } from "types";
 
 import styles from "./styles.module.scss";
 

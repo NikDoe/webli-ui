@@ -1,8 +1,7 @@
 import clsx from "clsx";
+import { Icon, Input } from "components";
 import { FC, useState } from "react";
-import { IFormField } from "../../types";
-import Icon from "../icon";
-import Input from "../input";
+import { IFormField } from "types";
 
 import styles from "./styles.module.scss";
 

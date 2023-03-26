@@ -17,6 +17,14 @@ export default defineConfig({
 		},
 	},
 	plugins: [svgr(), react(), dts()],
+	resolve: {
+		alias: {
+			assets: "/src/assets",
+			components: "/src/components",
+			types: "/src/types",
+			utils: "/src/utils",
+		},
+	},
 	build: {
 		emptyOutDir: true,
 		lib: {

@@ -17,7 +17,14 @@
 		"jsx": "react-jsx",
 		"outDir": "./dist/",
 		"sourceMap": true,
-		"declaration": true
+		"declaration": true,
+		"baseUrl": "src",
+		"paths": {
+			"assets/*": ["assets/*"],
+			"components/*": ["components/*"],
+			"types/*": ["types/*"],
+			"utils/*": ["utils/*"]
+		}
 	},
 	"include": ["src"],
 	"exclude": ["node_modules", "dist"],

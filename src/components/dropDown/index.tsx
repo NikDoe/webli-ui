@@ -1,6 +1,6 @@
 import { FC, memo, useRef } from "react";
 import { CSSTransition } from "react-transition-group";
-import { IDropDownProps } from "../../types";
+import { IDropDownProps } from "types";
 
 import styles from "./styles.module.scss";
 

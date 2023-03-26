@@ -1,5 +1,4 @@
 import { FC } from "react";
-import { createDate } from "../../utils";
 
 interface IDatePickerProps {
 	prop: string;
