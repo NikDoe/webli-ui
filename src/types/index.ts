@@ -1,3 +1,4 @@
+import { IAvatarProps } from "./avatar";
 import { IButtonProps } from "./button";
 import { ICheckboxProps } from "./checkbox";
 import { FormFieldType, IFormField } from "./formField";
@@ -8,6 +9,7 @@ export { iconTypes };
 
 export type {
 	FormFieldType,
+	IAvatarProps,
 	IButtonProps,
 	ICheckboxProps,
 	IconType,

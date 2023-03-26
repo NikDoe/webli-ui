@@ -1,4 +1,5 @@
 import {
+	Avatar,
 	Button,
 	CheckBox,
 	DatePicker,
@@ -7,4 +8,4 @@ import {
 	Input,
 } from "./components";
 
-export { Button, CheckBox, DatePicker, FormField, Icon, Input };
+export { Avatar, Button, CheckBox, DatePicker, FormField, Icon, Input };
