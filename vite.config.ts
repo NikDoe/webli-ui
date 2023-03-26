@@ -5,7 +5,6 @@ import svgr from "vite-plugin-svgr";
 
 import path from "path";
 
-// https://vitejs.dev/config/
 export default defineConfig({
 	css: {
 		preprocessorOptions: {
@@ -26,10 +25,11 @@ export default defineConfig({
 			fileName: "index",
 		},
 		rollupOptions: {
-			external: ["react"],
+			external: ["react", "react-transition-group"],
 			output: {
 				globals: {
 					react: "react",
+					"react-transition-group": "ReactTransitionGroup",
 				},
 			},
 		},
