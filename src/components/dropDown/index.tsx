@@ -13,17 +13,15 @@ const DropDownComponent: FC<IDropDownProps> = ({
 }) => {
 	const nodeRef = useRef(null);
 
+	const defaultTransitions = {
+		enter: styles.Enter,
+		enterDone: styles.EnterDone,
+		exit: styles.Exit,
+	};
+
 	return (
 		<CSSTransition
-			classNames={
-				transitions
-					? transitions
-					: {
-							enter: styles.Enter,
-							enterDone: styles.EnterDone,
-							exit: styles.Exit,
-					  }
-			}
+			classNames={transitions ? transitions : defaultTransitions}
 			in={isOpen}
 			nodeRef={nodeRef}
 			timeout={200}
