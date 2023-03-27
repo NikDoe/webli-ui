@@ -23,6 +23,7 @@ module.exports = {
 		"react/react-in-jsx-scope": "off",
 		"linebreak-style": 0,
 		"no-console": ["error"],
+		"no-mixed-spaces-and-tabs": "off",
 	},
 	settings: {
 		react: {
