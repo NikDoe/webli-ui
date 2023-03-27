@@ -19,10 +19,10 @@ export default defineConfig({
 	plugins: [svgr(), react(), dts()],
 	resolve: {
 		alias: {
-			assets: "/src/assets",
-			components: "/src/components",
-			types: "/src/types",
-			utils: "/src/utils",
+			assets: path.resolve(__dirname, "./src/assets"),
+			components: path.resolve(__dirname, "./src/components"),
+			types: path.resolve(__dirname, "./src/types"),
+			utils: path.resolve(__dirname, "./src/utils"),
 		},
 	},
 	build: {
