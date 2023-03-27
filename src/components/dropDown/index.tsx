@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import { FC, memo, useRef } from "react";
 import { CSSTransition } from "react-transition-group";
 import { IDropDownProps } from "types";
@@ -6,6 +7,7 @@ import styles from "./styles.module.scss";
 
 const DropDownComponent: FC<IDropDownProps> = ({
 	className,
+	transitions,
 	children,
 	isOpen,
 }) => {
@@ -13,14 +15,24 @@ const DropDownComponent: FC<IDropDownProps> = ({
 
 	return (
 		<CSSTransition
-			classNames={className}
+			classNames={
+				transitions
+					? transitions
+					: {
+							enter: styles.Enter,
+							enterDone: styles.EnterDone,
+							exit: styles.Exit,
+					  }
+			}
 			in={isOpen}
 			nodeRef={nodeRef}
-			timeout={150}
+			timeout={200}
 			unmountOnExit
 		>
-			<div className={styles.Dropdown} ref={nodeRef}>
-				{children}
+			<div ref={nodeRef}>
+				<div className={clsx(styles.Dropdown, className)}>
+					{children}
+				</div>
 			</div>
 		</CSSTransition>
 	);

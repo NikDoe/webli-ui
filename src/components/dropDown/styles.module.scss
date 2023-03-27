@@ -1,3 +1,28 @@
+$transition: all 0.2s;
+
+.Enter {
+	opacity: 0;
+	transform: translateY(20px);
+}
+
+.EnterDone {
+	opacity: 1;
+	transform: translateY(0);
+	transition: $transition;
+}
+
+.Exit {
+	transform: translateY(20px);
+	opacity: 0;
+	transition: $transition;
+}
+
 .Dropdown {
-	width: 100%;
+	padding: 10px 20px;
+	height: max-content;
+	width: max-content;
+	background-color: white;
+	border: 1px solid rgba($color: #000000, $alpha: 0.1);
+	border-radius: 5px;
+	z-index: 100;
 }
