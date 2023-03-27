@@ -28,9 +28,7 @@ const DropDownComponent: FC<IDropDownProps> = ({
 			unmountOnExit
 		>
 			<div ref={nodeRef}>
-				<div className={clsx(styles.Dropdown, className)}>
-					{children}
-				</div>
+				<div className={className}>{children}</div>
 			</div>
 		</CSSTransition>
 	);
