@@ -52,12 +52,14 @@
 		"@vitejs/plugin-react": "^3.1.0",
 		"clsx": "^1.2.1",
 		"eslint": "^8.33.0",
+		"eslint-plugin-prettier": "^4.2.1",
 		"eslint-plugin-react": "^7.32.2",
 		"husky": "^8.0.0",
 		"lint-staged": "^13.1.0",
 		"prettier": "2.8.3",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
+		"react-hook-form": "^7.43.8",
 		"react-transition-group": "^4.4.5",
 		"sass": "^1.58.0",
 		"stylelint": "^14.16.1",
@@ -71,8 +73,11 @@
 		"vite-plugin-svgr": "^2.4.0"
 	},
 	"peerDependencies": {
+		"@types/react-transition-group": "*",
 		"react": "*",
-		"react-dom": "*"
+		"react-dom": "*",
+		"react-hook-form": "*",
+		"react-transition-group": "*"
 	},
 	"lint-staged": {
 		"*.{js,jsx,ts,tsx}": "npx eslint --fix",
