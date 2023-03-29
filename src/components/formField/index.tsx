@@ -1,11 +1,12 @@
 import clsx from "clsx";
 import { Icon, Input } from "components";
-import { FC, useState } from "react";
+import { useState } from "react";
 import { IFormField } from "types";
 
 import styles from "./styles.module.scss";
 
-const FormField: FC<IFormField> = ({
+const FormField = <T,>({
+	register,
 	className,
 	isFocused = false,
 	isRequired,
@@ -16,7 +17,7 @@ const FormField: FC<IFormField> = ({
 	onBlur,
 	onFocus,
 	...props
-}) => {
+}: IFormField<T>): JSX.Element => {
 	const [isShowPassword, setIsShowPassword] = useState(false);
 
 	const handleShowPassword = () => {
@@ -31,9 +32,14 @@ const FormField: FC<IFormField> = ({
 	};
 
 	const renderInput = () => {
+		const passwordCondition =
+			(type === "password" && !isShowPassword) ||
+			(type !== "password" && isShowPassword);
+
 		return (
 			<>
 				<Input
+					{...(register ? register(name) : register)}
 					className={clsx(isFocused && styles.Input__active)}
 					name={name}
 					error={error}
@@ -42,8 +48,7 @@ const FormField: FC<IFormField> = ({
 					type={handleType()}
 					{...props}
 				/>
-				{((type === "password" && !isShowPassword) ||
-					(type !== "password" && isShowPassword)) && (
+				{passwordCondition && (
 					<Icon
 						type={isShowPassword ? "visibleoff" : "visible"}
 						className={styles.Visible}
