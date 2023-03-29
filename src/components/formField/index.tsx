@@ -1,11 +1,12 @@
 import clsx from "clsx";
 import { Icon, Input } from "components";
 import { useState } from "react";
+import { FieldValues } from "react-hook-form";
 import { IFormField } from "types";
 
 import styles from "./styles.module.scss";
 
-const FormField = <T,>({
+const FormField = <T extends FieldValues>({
 	register,
 	className,
 	isFocused = false,
