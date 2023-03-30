@@ -25,6 +25,12 @@ module.exports = {
 		"linebreak-style": 0,
 		"no-console": ["error"],
 		"no-mixed-spaces-and-tabs": "off",
+		"prettier/prettier": [
+			"error",
+			{
+				endOfLine: "auto",
+			},
+		],
 	},
 	settings: {
 		react: {
