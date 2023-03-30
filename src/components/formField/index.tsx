@@ -56,7 +56,6 @@ const FormField = <T extends FieldValues>({
 						onClick={handleShowPassword}
 					/>
 				)}
-				{error && <div className={styles.Error}>{error}</div>}
 			</>
 		);
 	};
@@ -69,13 +68,16 @@ const FormField = <T extends FieldValues>({
 				className,
 			)}
 		>
-			<label className={clsx(styles.Label)} htmlFor={name}>
-				{label}
-				{isRequired && (
-					<span className={styles.Label__required}> *</span>
-				)}
-			</label>
-			{renderInput()}
+			<div style={{ position: "relative" }}>
+				<label className={clsx(styles.Label)} htmlFor={name}>
+					{label}
+					{isRequired && (
+						<span className={styles.Label__required}> *</span>
+					)}
+				</label>
+				{renderInput()}
+			</div>
+			{error && <div className={styles.Error}>{error}</div>}
 		</div>
 	);
 };

@@ -5,6 +5,20 @@
 	margin-bottom: 30px;
 	transition: all 0.2s;
 
+	.Label {
+		position: absolute;
+		left: 10px;
+		top: 50%;
+		transform: translateY(-50%);
+		font-size: 14px;
+		pointer-events: none;
+		transition: all 0.2s;
+
+		&__required {
+			color: $error-color;
+		}
+	}
+
 	&__active {
 		.Label {
 			font-size: 12px;
@@ -24,28 +38,13 @@
 			}
 		}
 	}
-}
 
-.Label {
-	position: absolute;
-	left: 10px;
-	top: 50%;
-	transform: translateY(-50%);
-	font-size: 14px;
-	pointer-events: none;
-	transition: all 0.2s;
-
-	&__required {
+	.Error {
+		padding: 5px 0;
+		font-size: 12px;
 		color: $error-color;
+		transition: all 0.2s;
 	}
-}
-
-.Error {
-	position: absolute;
-	bottom: -15px;
-	font-size: 12px;
-	color: $error-color;
-	transition: all 0.2s;
 }
 
 .Visible {
