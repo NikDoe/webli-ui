@@ -35,7 +35,7 @@ const FormField = <T extends FieldValues>({
 	const renderInput = () => {
 		const passwordCondition =
 			(type === "password" && !isShowPassword) ||
-			(type !== "password" && isShowPassword);
+			(type === "password" && isShowPassword);
 
 		return (
 			<>
